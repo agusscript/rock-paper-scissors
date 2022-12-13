@@ -18,13 +18,30 @@ if(playerSelection === "rock"){
 const computerSelection = getComputerChoice();
 
 if(computerSelection === "rock"){
-    console.log("The computer chose Rock");
+    console.log("The Computer chose Rock");
 }else if(computerSelection === "paper"){
-    console.log("The computer chose Paper");
+    console.log("The Computer chose Paper");
 }else{
-    console.log("The computer chose Scissors");
+    console.log("The Computer chose Scissors");
 }
 
-function playRound() {
+function playRound(playerSelection, computerSelection) {
+    if(playerSelection === computerSelection){
+        console.log("There is a Tie");
+    }else if(playerSelection === "rock" && computerSelection === "scissors"){
+        console.log("You win! Rock beats Scissors");
+    }else if(playerSelection === "scissors" && computerSelection === "rock"){
+        console.log("You lose! Rock beats Scissors");
+    }else if(playerSelection === "paper" && computerSelection === "rock"){
+        console.log("You win! Paper beats Rock");
+    }else if(playerSelection === "rock" && computerSelection === "paper"){
+        console.log("You lose! Paper beats Rock");
+    }else if(playerSelection === "scissors" && computerSelection === "paper"){
+        console.log("You win! Scissors beats Saper");
+    }else if(playerSelection === "paper" && computerSelection === "scissors"){
+        console.log("You lose! Scissors beats Paper");
+    }else{
+        console.log("Invalid input")
+    }
 }
-
+playRound(playerSelection, computerSelection)
