@@ -26,7 +26,8 @@ function score() {
 
   return playerScore && computerScore;
 }
-tetxContainer = document.querySelector(".playround-results");
+
+let tetxContainer = document.querySelector(".playround-results");
 
 function playRound() {
   let computerSelection = getComputerChoice();
@@ -49,6 +50,10 @@ function playRound() {
   }
 
   score();
+}
+
+function createTextResults() {
+  let computerSelection = getComputerChoice();
 
   let playerSelectionText = document.createElement("p");
   playerSelectionText.textContent = "You have chosen " + playerSelection;
@@ -63,68 +68,54 @@ function playRound() {
   tetxContainer.appendChild(roundResultText);
 }
 
-let scoreContainer = document.querySelector(".score-results");//usar la misma logica para el output de playround
+function createTextScores() {
+  let playerScoreText = document.querySelector(".player-score");
+  let emptyPlayerScoreSpan = document.querySelector(".player-score-num");
 
-let playerScoreText = document.querySelector(".player-score");
-let emptyPlayerScoreSpan = document.querySelector(".player-score-num");
+  let computerScoreText = document.querySelector(".computer-score");
+  let emptyComputerScoreSpan = document.querySelector(".computer-score-num");
 
-let computerScoreText = document.querySelector(".computer-score");
-let emptyComputerScoreSpan = document.querySelector(".computer-score-num");
-
-
-let buttonPlayerSelection = document.querySelector(".btn-rock");
-buttonPlayerSelection.addEventListener("click", () => {
-  playerSelection = "rock";
-  playRound();
   let playerScoreNum = document.createElement("span");
   playerScoreNum.textContent = "The player score is " + playerScore;
   playerScoreText.replaceChildren(emptyPlayerScoreSpan, playerScoreNum);
 
-  let computerScoreNum = document.createElement("span");  
+  let computerScoreNum = document.createElement("span");
   computerScoreNum.textContent = "The computer score is " + computerScore;
   computerScoreText.replaceChildren(emptyComputerScoreSpan, computerScoreNum);
+}
 
+let buttonPlayerSelection = document.querySelector(".btn-rock");
+buttonPlayerSelection.addEventListener("click", () => {
+  playerSelection = "rock";
+
+  playRound();
+  createTextResults();
+  createTextScores()  
   stopGame();
 });
 
 buttonPlayerSelection = document.querySelector(".btn-paper");
 buttonPlayerSelection.addEventListener("click", () => {
   playerSelection = "paper";
+
   playRound();
-
-  let playerScoreNum = document.createElement("span");
-  playerScoreNum.textContent = "The player score is " + playerScore;
-  playerScoreText.replaceChildren(emptyPlayerScoreSpan, playerScoreNum);
-
-  let computerScoreNum = document.createElement("span");  
-  computerScoreNum.textContent = "The computer score is " + computerScore;
-  computerScoreText.replaceChildren(emptyComputerScoreSpan, computerScoreNum);
+  createTextResults();
+  createTextScores()
+  stopGame();
 });
 
 buttonPlayerSelection = document.querySelector(".btn-scissors");
 buttonPlayerSelection.addEventListener("click", () => {
   playerSelection = "scissors";
+
   playRound();
-
-  let playerScoreNum = document.createElement("span");
-  playerScoreNum.textContent = "The player score is " + playerScore;
-  playerScoreText.replaceChildren(emptyPlayerScoreSpan, playerScoreNum);
-
-  let computerScoreNum = document.createElement("span");  
-  computerScoreNum.textContent = "The computer score is " + computerScore;
-  computerScoreText.replaceChildren(emptyComputerScoreSpan, computerScoreNum);
+  createTextResults();
+  createTextScores()
+  stopGame();
 });
 
-function game() {
-  for (let i = 1; i <= 5; i++) {
-    playRound();
-  }
-
-  console.log("Round finished");
-}
-
 function stopGame() {
-  if(playerScore === 5 || computerScore === 5 ){
+  if (playerScore === 5 || computerScore === 5) {
     document.write("you win"); // esto no caralfombra
   }
 }
