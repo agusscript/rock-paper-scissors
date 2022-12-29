@@ -27,8 +27,6 @@ function score() {
   return playerScore && computerScore;
 }
 
-let tetxContainer = document.querySelector(".playround-results");
-
 function playRound() {
   let computerSelection = getComputerChoice();
   playerSelection;
@@ -55,17 +53,26 @@ function playRound() {
 function createTextResults() {
   let computerSelection = getComputerChoice();
 
+  let playerSelectionP = document.querySelector(".player-selection");
+  let emptyPlayerSelectionSpan = document.querySelector(".player-selection-num");
+
+  let computerScoreP = document.querySelector(".computer-selection");
+  let emptyComputerSelectionSpan = document.querySelector(".computer-selection-num");
+
+  let roundResultP = document.querySelector(".round-results");
+  let emptyRoundResultSpan = document.querySelector(".round-results-num");
+
   let playerSelectionText = document.createElement("p");
   playerSelectionText.textContent = "You have chosen " + playerSelection;
-  tetxContainer.appendChild(playerSelectionText);
+  playerSelectionP.replaceChildren(emptyPlayerSelectionSpan, playerSelectionText);
 
   let computerSelectionText = document.createElement("p");
   computerSelectionText.textContent = "The computer choice " + computerSelection;
-  tetxContainer.appendChild(computerSelectionText);
+  computerScoreP.replaceChildren(emptyComputerSelectionSpan, computerSelectionText);
 
   let roundResultText = document.createElement("p");
   roundResultText.textContent = roundResult;
-  tetxContainer.appendChild(roundResultText);
+  roundResultP.replaceChildren(emptyRoundResultSpan, roundResultText);
 }
 
 function createTextScores() {
