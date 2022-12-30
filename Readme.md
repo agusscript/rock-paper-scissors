@@ -1,4 +1,4 @@
-# The Odin Project - Foundations Course - Rock Paper Scissors solution
+# Rock Paper Scissors game
 
 This is a solution to the  [Rock Paper Scissors](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors). The Odin Project provides a free open source coding curriculum that can be taken entirely online.
 
@@ -20,7 +20,7 @@ This is a solution to the  [Rock Paper Scissors](https://www.theodinproject.com/
 
 # Link
 
-- [Live site](https://agusscript.github.io/Rock-Paper-Scissors/)
+- You can play a demo here [Live site](https://agusscript.github.io/Rock-Paper-Scissors/)
 
 
 
