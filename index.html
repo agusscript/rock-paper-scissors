@@ -2,33 +2,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock, Paper, Scissors</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock, Paper, Scissors</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <main>
-        <button class="btn-rock">Rock</button>
-        <button class="btn-paper">Paper</button>
-        <button class="btn-scissors">Scissors</button>
+  <main>
+    <div class="content-container">
+      <div class="buttons-container">
+        <button class="btn-rock">
+          <img src="images/hand-back-fist-solid.svg" alt="hand rock">
+          <p class="btn-p">Rock</p>
+        </button>
+        <button class="btn-paper">
+          <img src="images/hand-solid.svg" alt="hand rock">
+          <p class="btn-p">Paper</p>
+        </button>
+        <button class="btn-scissors">
+          <img src="images/hand-scissors-solid.svg" alt="hand rock">
+          <p class="btn-p">Scissors</p>
+        </button>
+      </div>
 
-        <div class="playround-results">
-            <p class="player-selection"><span class="player-selection-num"></span></p>
-            <p class="computer-selection"><span class="computer-selection-num"></span></p>
-            <p class="round-results"><span class="round-results-num"></span></p>
-        </div>
+      <div class="playround-results">
+        <p class="player-selection">Player selection ?<span class="player-selection-num"></span></p>
+        <p class="computer-selection">Computer selection ?<span class="computer-selection-num"></span></p>
+        <p class="round-results">Results<span class="round-results-num"></span></p>
+      </div>
 
-        <div class="score-results">
-            <p class="player-score">The player score is<span class="player-score-num"></span></p>
-            <p class="computer-score">The computer score is<span class="computer-score-num"></span></p>
-        </div>
+      <div class="score-results">
+        <p class="player-score">The player score is ?<span class="player-score-num"></span></p>
+        <p class="computer-score">The computer score is ?<span class="computer-score-num"></span></p>
+      </div>
 
-        <button class="reset">Play again</button>
-    </main>
-    <script src="index.js"></script>
+      <button class="reset-btn">Play again</button>
+    </div>
+  </main>
+  <script src="index.js"></script>
 </body>
 
 </html>
