@@ -1,6 +1,10 @@
 # Rock Paper Scissors game
 
-This is a solution to the  [Rock Paper Scissors](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors). The Odin Project provides a free open source coding curriculum that can be taken entirely online.
+This is a solution to the  [Rock Paper Scissors](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors) project challenge.
+
+Users should be able to:
+
+- Play vs the computer, the first in reach 5 points will win the game
 
 # What I learned
 
@@ -22,5 +26,8 @@ This is a solution to the  [Rock Paper Scissors](https://www.theodinproject.com/
 
 - You can play a demo here [Live site](https://agusscript.github.io/Rock-Paper-Scissors/)
 
+# Author
+
+- Linkedin - [Agustin Emanuel Sanchez](https://www.linkedin.com/in/agustin-emanuel-sanchez-4b2807240/)
 
 
