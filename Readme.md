@@ -30,11 +30,7 @@ Users should be able to:
 
 # Screenshots
 
-![](images/screenshot.webp)
 
-![](images/active-state.webp)
-
-![](images/screenshot-1.webp)
 
 # Link
 
