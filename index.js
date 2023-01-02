@@ -66,14 +66,14 @@ function createTextResults() {
   let roundResultP = document.querySelector(".round-results");
   let emptyRoundResultSpan = document.querySelector(".round-results-num");
 
-  let playerSelectionText = document.createElement("p");
+  let playerSelectionText = document.createElement("span");
   playerSelectionText.textContent = "You have chosen " + playerSelection;
   playerSelectionP.replaceChildren(
     emptyPlayerSelectionSpan,
     playerSelectionText
   );
 
-  let computerSelectionText = document.createElement("p");
+  let computerSelectionText = document.createElement("span");
   computerSelectionText.textContent =
     "The computer choice " + computerSelection;
   computerScoreP.replaceChildren(
@@ -81,7 +81,7 @@ function createTextResults() {
     computerSelectionText
   );
 
-  let roundResultText = document.createElement("p");
+  let roundResultText = document.createElement("span");
   roundResultText.textContent = roundResult;
   roundResultP.replaceChildren(emptyRoundResultSpan, roundResultText);
 }
@@ -141,10 +141,10 @@ function stopGame() {
 
   if (playerScore === 5) {
     buttonsSelection.remove(buttonsSelection);
-    winnerRound.textContent = "You win!, congrats";
+    winnerRound.textContent = "You win! congrats";
   } else if (computerScore === 5) {
     buttonsSelection.remove(buttonsSelection);
-    winnerRound.textContent = "You lose!, keep trying";
+    winnerRound.textContent = "You lose! keep trying";
   }
 }
 
