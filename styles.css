@@ -6,6 +6,7 @@ body {
 
 .buttons-container {
   margin: 0 auto;
+  margin-top: 1rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -94,5 +95,5 @@ body {
 .reset-btn-container {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
