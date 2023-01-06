@@ -54,36 +54,13 @@ function createTextResults() {
   let computerSelection = getComputerChoice();
 
   let playerSelectionP = document.querySelector(".player-selection");
-  let emptyPlayerSelectionSpan = document.querySelector(
-    ".player-selection-num"
-  );
+  playerSelectionP.innerText = "You have chosen " + playerSelection;
 
   let computerScoreP = document.querySelector(".computer-selection");
-  let emptyComputerSelectionSpan = document.querySelector(
-    ".computer-selection-num"
-  );
+  computerScoreP.innerText = "The computer chose " + computerSelection;
 
   let roundResultP = document.querySelector(".round-results");
-  let emptyRoundResultSpan = document.querySelector(".round-results-num");
-
-  let playerSelectionText = document.createElement("span");
-  playerSelectionText.textContent = "You have chosen " + playerSelection;
-  playerSelectionP.replaceChildren(
-    emptyPlayerSelectionSpan,
-    playerSelectionText
-  );
-
-  let computerSelectionText = document.createElement("span");
-  computerSelectionText.textContent =
-    "The computer choice " + computerSelection;
-  computerScoreP.replaceChildren(
-    emptyComputerSelectionSpan,
-    computerSelectionText
-  );
-
-  let roundResultText = document.createElement("span");
-  roundResultText.textContent = roundResult;
-  roundResultP.replaceChildren(emptyRoundResultSpan, roundResultText);
+  roundResultP.innerText = roundResult;
 }
 
 function createTextScores() {
