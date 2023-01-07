@@ -48,63 +48,52 @@ function playRound() {
   }
 
   score();
+  createTextResults(playerSelection, computerSelection);
 }
 
-function createTextResults() {
-  let computerSelection = getComputerChoice();
-
+function createTextResults(playerSelection, computerSelection) {
   let playerSelectionP = document.querySelector(".player-selection");
-  playerSelectionP.innerText = "You have chosen " + playerSelection;
+  playerSelectionP.textContent = "You have chosen " + playerSelection;
 
   let computerScoreP = document.querySelector(".computer-selection");
-  computerScoreP.innerText = "The computer chose " + computerSelection;
+  computerScoreP.textContent = "The computer chose " + computerSelection;
 
   let roundResultP = document.querySelector(".round-results");
-  roundResultP.innerText = roundResult;
+  roundResultP.textContent = roundResult;
 }
 
 function createTextScores() {
   let playerScoreText = document.querySelector(".player-score");
-  let emptyPlayerScoreSpan = document.querySelector(".player-score-num");
+  playerScoreText.textContent = "The player score is " + playerScore;
 
   let computerScoreText = document.querySelector(".computer-score");
-  let emptyComputerScoreSpan = document.querySelector(".computer-score-num");
-
-  let playerScoreNum = document.createElement("span");
-  playerScoreNum.textContent = "The player score is " + playerScore;
-  playerScoreText.replaceChildren(emptyPlayerScoreSpan, playerScoreNum);
-
-  let computerScoreNum = document.createElement("span");
-  computerScoreNum.textContent = "The computer score is " + computerScore;
-  computerScoreText.replaceChildren(emptyComputerScoreSpan, computerScoreNum);
+  computerScoreText.textContent = "The computer score is " + computerScore;
 }
 
-let buttonPlayerSelection = document.querySelector(".btn-rock");
-buttonPlayerSelection.addEventListener("click", () => {
+
+let buttonPlayerSelectionRock = document.querySelector(".btn-rock");
+buttonPlayerSelectionRock.addEventListener("click", () => {
   playerSelection = "rock";
 
   playRound();
-  createTextResults();
   createTextScores();
   stopGame();
 });
 
-buttonPlayerSelection = document.querySelector(".btn-paper");
-buttonPlayerSelection.addEventListener("click", () => {
+let buttonPlayerSelectionPaper = document.querySelector(".btn-paper");
+buttonPlayerSelectionPaper.addEventListener("click", () => {
   playerSelection = "paper";
 
   playRound();
-  createTextResults();
   createTextScores();
   stopGame();
 });
 
-buttonPlayerSelection = document.querySelector(".btn-scissors");
-buttonPlayerSelection.addEventListener("click", () => {
+let buttonPlayerSelectionScissors = document.querySelector(".btn-scissors");
+buttonPlayerSelectionScissors.addEventListener("click", () => {
   playerSelection = "scissors";
 
   playRound();
-  createTextResults();
   createTextScores();
   stopGame();
 });
